@@ -1,5 +1,7 @@
 import { RouterProvider } from "react-router-dom";
-import { createRouter } from "./routes";
+import { Provider } from "react-redux";
+import { createRouter } from "routes";
+import store from "./store";
 
 const AppRouter = () => {
 	const router = createRouter();
@@ -8,7 +10,11 @@ const AppRouter = () => {
 };
 
 const App = () => {
-	return <AppRouter />;
+	return (
+		<Provider store={store}>
+			<AppRouter />;
+		</Provider>
+	);
 };
 
 export default App;

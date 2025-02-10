@@ -5,7 +5,7 @@ export const createRouter = () =>
 		{
 			path: "/",
 			lazy: async () => {
-				const { HomeRoute } = await import("./pages/home");
+				const { HomeRoute } = await import("@pages/home");
 				return { Component: HomeRoute };
 			},
 		},
