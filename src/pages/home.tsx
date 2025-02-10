@@ -5,6 +5,7 @@ export const HomeRoute = () => {
 		<div className='w-screen h-screen bg-stone-950 text-gray-200'>
 			<div className='container mx-auto'>
 				<Navigation />
+				<div></div>
 			</div>
 		</div>
 	);
