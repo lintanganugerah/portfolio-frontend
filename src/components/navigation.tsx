@@ -3,7 +3,7 @@ import SpotlightCard from "@utils/spotlight-card";
 export const Navigation = () => {
 	return (
 		<SpotlightCard
-			className='h-12 mx-24'
+			className='h-12 my-4'
 			spotlightColor='rgba(0, 229, 255, 0.2)'
 		>
 			<div className='h-full flex flex-row items-center justify-around'>

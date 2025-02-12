@@ -19,6 +19,7 @@ export interface ControlProps {
 export interface AuroraProps extends CommonProps, TimeProps, ControlProps {
 	colorStops?: [string, string, string];
 	amplitude?: number;
+	bottomColor?: string;
 }
 
 const VERT = `#version 300 es
@@ -39,6 +40,7 @@ precision highp float;
 uniform float uTime;
 uniform float uAmplitude;
 uniform vec3 uColorStops[3];
+uniform vec3 uBottomColor;
 
 in vec2 vUv;
 out vec4 fragColor;
@@ -128,14 +130,20 @@ void main() {
     height = exp(height);
     height = (vUv.y * 2.0 - height + 0.2);
 
-    fragColor.rgb = 0.6 * height * rampColor;
+    // Blend ramp color with bottom color based on height
+    vec3 finalColor = mix(uBottomColor, rampColor, height);
+
+    fragColor.rgb = 0.6 * finalColor;
     fragColor.a = 1.0;
 }
 `;
 
 export default function Aurora(props: AuroraProps) {
-	const { colorStops = ["#00d8ff", "#7cff67", "#00d8ff"], amplitude = 1.0 } =
-		props;
+	const {
+		colorStops = ["#00d8ff", "#7cff67", "#00d8ff"],
+		amplitude = 1.0,
+		bottomColor = "#0C0A09",
+	} = props;
 
 	const propsRef = useRef(props);
 	propsRef.current = props;
@@ -168,6 +176,13 @@ export default function Aurora(props: AuroraProps) {
 			return [c.r, c.g, c.b] as [number, number, number];
 		});
 
+		const bottomColorArray = new Color(bottomColor);
+		const bottomColorVec = [
+			bottomColorArray.r,
+			bottomColorArray.g,
+			bottomColorArray.b,
+		] as [number, number, number];
+
 		const program = new Program(gl, {
 			vertex: VERT,
 			fragment: FRAG,
@@ -175,6 +190,7 @@ export default function Aurora(props: AuroraProps) {
 				uTime: { value: 0 },
 				uAmplitude: { value: amplitude },
 				uColorStops: { value: colorStopsArray },
+				uBottomColor: { value: bottomColorVec },
 			},
 		});
 
@@ -196,6 +212,14 @@ export default function Aurora(props: AuroraProps) {
 				return [c.r, c.g, c.b] as [number, number, number];
 			});
 
+			const bottomColorHex = propsRef.current.bottomColor ?? bottomColor;
+			const bottomColorArray = new Color(bottomColorHex);
+			program.uniforms.uBottomColor.value = [
+				bottomColorArray.r,
+				bottomColorArray.g,
+				bottomColorArray.b,
+			];
+
 			renderer.render({ scene: mesh });
 		};
 		animateId = requestAnimationFrame(update);
@@ -208,7 +232,7 @@ export default function Aurora(props: AuroraProps) {
 
 			gl.getExtension("WEBGL_lose_context")?.loseContext();
 		};
-	}, [amplitude, colorStops]);
+	}, [amplitude, colorStops, bottomColor]);
 
 	return <div ref={ctnDom} className='aurora-container' />;
 }
