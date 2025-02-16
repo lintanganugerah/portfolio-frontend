@@ -15,7 +15,7 @@ export const HomeRoute = () => {
 				/>
 			</div>
 			<div className='relative container mx-auto'>
-				<div className='relative flex flex-col space-y-8'>
+				<div className='relative flex flex-col space-y-20'>
 					<div className='sticky top-0 z-20 my-2'>
 						<Navigation />
 					</div>
