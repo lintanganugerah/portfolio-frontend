@@ -14,9 +14,11 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
 	description,
 }) => {
 	return (
-		<div className='relative pl-6 border-l border-gray-700 pb-6'>
-			<span className='absolute left-0 w-2 h-2 bg-yellow-400 rounded-full top-1'></span>
-			<h3 className='text-xl font-semibold text-white'>{title}</h3>
+		<div className='relative pl-6 pb-6'>
+			<div className='flex flex-row items-center'>
+				<div className='absolute -left-1 w-2 h-2 bg-yellow-400 rounded-full'></div>
+				<h3 className='text-xl font-semibold text-white'>{title}</h3>
+			</div>
 			<h4 className='text-lg text-gray-400'>{subtitle}</h4>
 			<p className='text-sm text-gray-500 uppercase tracking-wide'>{date}</p>
 			<p className='text-gray-300 mt-2'>{description}</p>
@@ -45,7 +47,7 @@ const Timeline: React.FC = () => {
 	return (
 		<div className='bg-black p-8 rounded-lg max-w-2xl mx-auto'>
 			<h2 className='text-white text-2xl font-bold mb-6'>EXPERIENCE</h2>
-			<div className='space-y-6'>
+			<div className='space-y-6 border-l border-gray-800'>
 				{experiences.map((item, index) => (
 					<TimelineItem key={index} {...item} />
 				))}

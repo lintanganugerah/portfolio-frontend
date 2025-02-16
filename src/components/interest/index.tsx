@@ -3,7 +3,7 @@ export const Interest = () => {
 
 	return (
 		<div className='relative flex flex-col space-y-4'>
-			<h2 className='text-4xl font-bold'>INTEREST</h2>
+			<h2 className='text-3xl font-bold'>INTEREST</h2>
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolor
 				non alias distinctio ea! Lorem ipsum dolor sit amet consectetur
