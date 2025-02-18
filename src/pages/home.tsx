@@ -1,3 +1,4 @@
+import { Certificate } from "@components/certificate";
 import Timeline from "@components/experience";
 import { Interest } from "@components/interest";
 import { Intro } from "@components/intro";
@@ -29,9 +30,7 @@ export const HomeRoute = () => {
 						<Timeline />
 					</div>
 
-					<div>
-						<h2>Certificate</h2>
-					</div>
+					<Certificate />
 
 					<div>
 						<h1>Contact Me!</h1>
