@@ -9,4 +9,11 @@ export const createRouter = () =>
 				return { Component: HomeRoute };
 			},
 		},
+		{
+			path: "/profile",
+			lazy: async () => {
+				const { ProfileRoute } = await import("./pages/profile");
+				return { Component: ProfileRoute };
+			},
+		},
 	]);

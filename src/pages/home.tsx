@@ -31,7 +31,10 @@ export const HomeRoute = () => {
 						<Certificate />
 					</div>
 				</div>
-				<Contact />
+				<div>
+					<div className='h-20 bg-gradient-to-b from-black to-stone-950'></div>
+					<Contact />
+				</div>
 			</div>
 		</div>
 	);
