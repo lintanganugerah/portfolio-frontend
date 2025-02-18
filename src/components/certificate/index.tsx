@@ -4,7 +4,7 @@ export const Certificate = () => {
 	return (
 		<div className='w-full flex flex-col space-y-4'>
 			<h1 className='text-2xl font-bold'>CERTIFICATE</h1>
-			<div className='border p-6 rounded-xl'>
+			<div className='border border-gray-800 p-6 rounded-xl'>
 				<div className='flex flex-col space-y-6'>
 					<div className='flex flex-row justify-around'>
 						<div className='flex flex-col space-y-1'>
@@ -36,7 +36,7 @@ export const Certificate = () => {
 							</div>
 						</div>
 					</div>
-					<div className='border px-4 py-2 rounded-lg hover:bg-white hover:text-black hover:font-bold transition-colors duration-300'>
+					<div className='border border-gray-800 px-4 py-2 rounded-lg hover:bg-white hover:text-black hover:font-bold transition-colors duration-300'>
 						<div className='flex justify-center'>
 							<h2>SHOW ALL CERTIFICATE</h2>
 						</div>
