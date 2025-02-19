@@ -5,14 +5,14 @@ export const createRouter = () =>
 		{
 			path: "/",
 			lazy: async () => {
-				const { HomeRoute } = await import("./pages/home");
+				const { HomeRoute } = await import("./modules/user/pages/home");
 				return { Component: HomeRoute };
 			},
 		},
 		{
 			path: "/profile",
 			lazy: async () => {
-				const { ProfileRoute } = await import("./pages/profile");
+				const { ProfileRoute } = await import("./modules/user/pages/profile");
 				return { Component: ProfileRoute };
 			},
 		},

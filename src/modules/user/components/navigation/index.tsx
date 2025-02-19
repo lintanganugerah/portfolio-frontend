@@ -1,4 +1,4 @@
-import SpotlightCard from "@utils/spotlight-card";
+import SpotlightCard from "modules/user/utils/spotlight-card";
 
 export const Navigation = () => {
 	return (

@@ -1,7 +1,7 @@
 import { RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createRouter } from "./routes";
-import store from "./store";
+import store from "./modules/user/store";
 
 const AppRouter = () => {
 	const router = createRouter();

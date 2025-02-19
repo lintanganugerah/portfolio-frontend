@@ -1,10 +1,10 @@
-import { Certificate } from "@components/certificate";
-import { Contact } from "@components/contact";
-import Timeline from "@components/experience";
-import { Interest } from "@components/interest";
-import { Intro } from "@components/intro";
-import { Navigation } from "@components/navigation";
-import Aurora from "@utils/aurora";
+import { Certificate } from "modules/user/components/certificate";
+import { Contact } from "modules/user/components/contact";
+import Timeline from "modules/user/components/experience";
+import { Interest } from "modules/user/components/interest";
+import { Intro } from "modules/user/components/intro";
+import { Navigation } from "modules/user/components/navigation";
+import Aurora from "modules/user/utils/aurora";
 
 export const HomeRoute = () => {
 	return (
