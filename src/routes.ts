@@ -36,6 +36,16 @@ export const createRouter = () =>
 				const { DashboardRoute } = await import("./modules/dashboard");
 				return { Component: DashboardRoute };
 			},
-			children: [{}],
+			children: [
+				{
+					index: true,
+					lazy: async () => {
+						const { DashboardHome } = await import(
+							"./modules/dashboard/pages/home"
+						);
+						return { Component: DashboardHome };
+					},
+				},
+			],
 		},
 	]);
