@@ -2,9 +2,9 @@ import { Certificate } from "modules/user/components/certificate";
 import { Contact } from "modules/user/components/contact";
 import Timeline from "modules/user/components/experience";
 import { Interest } from "modules/user/components/interest";
-import { Intro } from "modules/user/components/intro";
 import { Navigation } from "modules/user/components/navigation";
 import Aurora from "modules/user/utils/aurora";
+import { IntroFeatures } from "../features/intro";
 
 export const HomeRoute = () => {
 	return (
@@ -22,7 +22,7 @@ export const HomeRoute = () => {
 						<div className='sticky top-0 z-20 my-2'>
 							<Navigation />
 						</div>
-						<Intro />
+						<IntroFeatures />
 						<Interest />
 						<div className='flex flex-row'>
 							<Timeline />
