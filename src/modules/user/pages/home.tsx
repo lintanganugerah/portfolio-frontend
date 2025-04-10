@@ -1,10 +1,10 @@
 import { Contact } from "modules/user/components/contact";
-import Timeline from "modules/user/components/experience";
 import { Interest } from "modules/user/components/interest";
 import { Navigation } from "modules/user/components/navigation";
 import Aurora from "modules/user/utils/aurora";
 import { IntroFeatures } from "../features/intro";
 import { CertificateFeatures } from "../features/certif";
+import { TimelineFeatures } from "../features/timeline";
 
 export const HomeRoute = () => {
 	return (
@@ -25,8 +25,8 @@ export const HomeRoute = () => {
 						<IntroFeatures />
 						<Interest />
 						<div className='flex flex-row'>
-							<Timeline />
-							<Timeline />
+							<TimelineFeatures />
+							<TimelineFeatures />
 						</div>
 						<CertificateFeatures />
 					</div>

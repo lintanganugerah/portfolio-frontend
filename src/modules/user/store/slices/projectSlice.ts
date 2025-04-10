@@ -1,21 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchProjects } from "../thunks/projectThunk";
+import { EditorJsContent } from "modules/user/types/editor";
 
 interface Project {
 	_id: string;
 	title: string;
-	description: {
-		time: number;
-		blocks: Array<{
-			type: string;
-			data: any;
-		}>;
-	};
+	description: EditorJsContent;
 	technology: string;
 	project_thumbnail_image: string;
 	createdAt: string;
 	updatedAt: string;
-	__v: number;
 }
 
 interface ProjectState {
@@ -31,7 +25,7 @@ const initialState: ProjectState = {
 };
 
 const projectSlice = createSlice({
-	name: "projects",
+	name: "project",
 	initialState,
 	reducers: {},
 	extraReducers: (builder) => {
@@ -51,4 +45,4 @@ const projectSlice = createSlice({
 	},
 });
 
-export default projectSlice.reducer;
+export const projectReducer = projectSlice.reducer;

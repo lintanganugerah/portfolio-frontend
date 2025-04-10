@@ -13,8 +13,6 @@ export const CertificateFeatures = () => {
 		dispatch(fetchCertificates());
 	}, [dispatch]);
 
-	console.log(certificates);
-
 	if (loading) return <p>Loading...</p>;
 	if (error) return <p>Error: {error}</p>;
 	if (!certificates.length) return <p>No certificate data available.</p>;

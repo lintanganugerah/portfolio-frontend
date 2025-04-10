@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios, { AxiosError } from "axios";
 
 export const fetchCertificates = createAsyncThunk(
-	"user/fetchCertificates",
+	"certificate/fetchCertificates",
 	async (_, { rejectWithValue }) => {
 		try {
 			const response = await axios.get(
