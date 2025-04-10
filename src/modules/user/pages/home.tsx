@@ -25,8 +25,16 @@ export const HomeRoute = () => {
 						<IntroFeatures />
 						<Interest />
 						<div className='flex flex-row'>
-							<TimelineFeatures />
-							<TimelineFeatures />
+							<div className='bg-black p-8 rounded-lg max-w-2xl mx-auto'>
+								<h2 className='text-white text-2xl font-bold mb-6'>
+									EXPERIENCE
+								</h2>
+								<TimelineFeatures />
+							</div>
+							<div className='bg-black p-8 rounded-lg max-w-2xl mx-auto'>
+								<h2 className='text-white text-2xl font-bold mb-6'>PROJECTS</h2>
+								<TimelineFeatures />
+							</div>
 						</div>
 						<CertificateFeatures />
 					</div>

@@ -17,19 +17,16 @@ export const TimelineFeatures = () => {
 	if (!projects.length) return <p>No project data available.</p>;
 
 	return (
-		<div className='bg-black p-8 rounded-lg max-w-2xl mx-auto'>
-			<h2 className='text-white text-2xl font-bold mb-6'>EXPERIENCE</h2>
-			<div className='space-y-6 border-l border-gray-800'>
-				{projects.map((proj) => (
-					<TimelineItem
-						key={proj._id}
-						title={proj.title}
-						subtitle={proj.technology}
-						date={format(new Date(proj.createdAt), "MMMM yyyy")}
-						description={proj.description}
-					/>
-				))}
-			</div>
+		<div className='space-y-6 border-l border-gray-800'>
+			{projects.map((proj) => (
+				<TimelineItem
+					key={proj._id}
+					title={proj.title}
+					subtitle={proj.technology}
+					date={format(new Date(proj.createdAt), "MMMM yyyy")}
+					description={proj.description}
+				/>
+			))}
 		</div>
 	);
 };

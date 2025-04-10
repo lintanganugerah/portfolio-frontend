@@ -17,7 +17,11 @@ export const Intro = ({ name, description, imageUrl }: IntroProps) => {
 			</div>
 			<div className='relative w-1/4 z-10'>
 				<img
-					src={imageUrl}
+					src={
+						imageUrl
+							? imageUrl
+							: "https://untirta.ac.id/wp-content/uploads/2023/08/placeholder-14.png"
+					}
 					alt='photo'
 					className='rounded-4xl -rotate-6 hover:rotate-0 transition-transform duration-300'
 				/>
