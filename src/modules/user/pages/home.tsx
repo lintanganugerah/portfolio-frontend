@@ -1,10 +1,10 @@
-import { Certificate } from "modules/user/components/certificate";
 import { Contact } from "modules/user/components/contact";
 import Timeline from "modules/user/components/experience";
 import { Interest } from "modules/user/components/interest";
 import { Navigation } from "modules/user/components/navigation";
 import Aurora from "modules/user/utils/aurora";
 import { IntroFeatures } from "../features/intro";
+import { CertificateFeatures } from "../features/certif";
 
 export const HomeRoute = () => {
 	return (
@@ -28,7 +28,7 @@ export const HomeRoute = () => {
 							<Timeline />
 							<Timeline />
 						</div>
-						<Certificate />
+						<CertificateFeatures />
 					</div>
 				</div>
 				<div>

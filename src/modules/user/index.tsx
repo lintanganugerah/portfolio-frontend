@@ -5,7 +5,7 @@ import store from "./store";
 export const UserRoute = () => {
 	return (
 		<Provider store={store}>
-			<Outlet />;
+			<Outlet />
 		</Provider>
 	);
 };
