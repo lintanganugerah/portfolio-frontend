@@ -48,7 +48,11 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
 			</div> */}
 
 			{opened && (
-				<div className='absolute left-8 top-0 align-middle z-50'>
+				<div
+					className={`absolute left-8 top-0 align-middle z-50 transition-all duration-300 ${
+						opened ? "animate-fade-in" : "animate-fade-out"
+					}`}
+				>
 					<ExperienceCard
 						title={title}
 						subtitle={subtitle}
