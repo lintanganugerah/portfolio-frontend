@@ -4,7 +4,7 @@ import { Navigation } from "modules/user/components/navigation";
 import Aurora from "modules/user/utils/aurora";
 import { IntroFeatures } from "../features/intro";
 import { CertificateFeatures } from "../features/certif";
-import { TimelineFeatures } from "../features/timeline";
+import { ProjectFeatures } from "../features/project";
 
 export const HomeRoute = () => {
 	return (
@@ -24,22 +24,22 @@ export const HomeRoute = () => {
 						</div>
 						<IntroFeatures />
 						<Interest />
-						<div className='flex flex-row'>
-							<div className='bg-black p-8 rounded-lg max-w-2xl mx-auto'>
+						<div className='flex flex-row justify-center'>
+							<div className='bg-black p-8 rounded-lg w-2xl mx-auto'>
 								<h2 className='text-white text-2xl font-bold mb-6'>
 									EXPERIENCE
 								</h2>
-								<TimelineFeatures />
+								<ProjectFeatures />
 							</div>
-							<div className='bg-black p-8 rounded-lg max-w-2xl mx-auto'>
+							<div className='bg-black p-8 rounded-lg w-2xl mx-auto'>
 								<h2 className='text-white text-2xl font-bold mb-6'>PROJECTS</h2>
-								<TimelineFeatures />
+								<ProjectFeatures />
 							</div>
 						</div>
 						<CertificateFeatures />
 					</div>
 				</div>
-				<div>
+				<div id='contact'>
 					<div className='h-20 bg-gradient-to-b from-black to-stone-950'></div>
 					<Contact />
 				</div>

@@ -25,7 +25,7 @@ export const Navigation = () => {
 				</div>
 				<div className='flex flex-row items-center space-x-10'>
 					<div className='p-1 px-4 rounded-lg hover:font-semibold hover:bg-white hover:text-black transition-colors duration-300'>
-						<a href='' className='text-lg'>
+						<a href='#contact' className='text-lg'>
 							Contact
 						</a>
 					</div>

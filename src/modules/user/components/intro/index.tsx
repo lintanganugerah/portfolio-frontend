@@ -13,15 +13,11 @@ export const Intro = ({ name, description, imageUrl }: IntroProps) => {
 					<h4 className='text-xl'>Hello,</h4>
 				</div>
 				<h1 className='font-russo text-7xl'>{name}</h1>
-				<h3 className='text-xl'>{description}</h3>
+				<h3 className='text-xl line-clamp-3'>{description}</h3>
 			</div>
 			<div className='relative w-1/4 z-10'>
 				<img
-					src={
-						imageUrl
-							? imageUrl
-							: "https://untirta.ac.id/wp-content/uploads/2023/08/placeholder-14.png"
-					}
+					src={imageUrl ? imageUrl : "/public/assets/placeholder.png"}
 					alt='photo'
 					className='rounded-4xl -rotate-6 hover:rotate-0 transition-transform duration-300'
 				/>
