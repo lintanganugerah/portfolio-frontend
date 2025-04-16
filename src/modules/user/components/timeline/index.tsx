@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 // import Output from "editorjs-react-renderer";
 import { EditorJsContent } from "modules/user/types/editor";
-import { ExperienceCard } from "./details";
 import { FaXmark } from "react-icons/fa6";
+import { TimelineCard } from "./details";
 
 type TimelineItemProps = {
 	title: string;
@@ -53,7 +53,7 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
 						opened ? "animate-fade-in" : "animate-fade-out"
 					}`}
 				>
-					<ExperienceCard
+					<TimelineCard
 						title={title}
 						subtitle={subtitle}
 						date={date}

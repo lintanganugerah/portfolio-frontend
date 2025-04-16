@@ -2,7 +2,7 @@ import React from "react";
 import Output from "editorjs-react-renderer";
 import { EditorJsContent } from "modules/user/types/editor";
 
-type ExperienceCardProps = {
+type TimelineCardProps = {
 	title: string;
 	subtitle: string;
 	date: string;
@@ -10,7 +10,7 @@ type ExperienceCardProps = {
 	imageUrl: string;
 };
 
-export const ExperienceCard: React.FC<ExperienceCardProps> = ({
+export const TimelineCard: React.FC<TimelineCardProps> = ({
 	title,
 	subtitle,
 	date,
