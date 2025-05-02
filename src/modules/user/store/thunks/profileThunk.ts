@@ -5,7 +5,7 @@ export const fetchUser = createAsyncThunk(
 	"user/fetchUser",
 	async (_, { rejectWithValue }) => {
 		try {
-			const response = await axios.get("https://porto.ngeengz.eu/api/v1/user");
+			const response = await axios.get("https://profilebe.ngeengz.eu/api/v1/user");
 			if (response.status === 200) {
 				return response.data.data[0];
 			} else {

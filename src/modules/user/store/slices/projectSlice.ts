@@ -2,12 +2,14 @@ import { createSlice } from "@reduxjs/toolkit";
 import { fetchProjects } from "../thunks/projectThunk";
 import { EditorJsContent } from "modules/user/types/editor";
 
-interface Project {
+export interface Project {
 	_id: string;
 	title: string;
 	description: EditorJsContent;
 	technology: string;
 	project_thumbnail_image: string;
+	year: string;
+	link: string;
 	createdAt: string;
 	updatedAt: string;
 }
