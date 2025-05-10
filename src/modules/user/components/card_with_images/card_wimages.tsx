@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import { EditorJsContent } from "modules/user/types/editor";
 import Output from 'editorjs-react-renderer';
 
@@ -11,9 +11,8 @@ interface CardProps {
     imageUrl?: string,
 }
 
-export const CardWimages = ({ title, date, subtitle, link, description, imageUrl }: CardProps) => {
+export const CardWimages = memo(({ title, date, subtitle, link, description, imageUrl }: CardProps) => {
     const [showMore, setShowMore] = useState(false);
-
     return (
         <div className="flex flex-wrap justify-center gap-4">
             <div className="bg-black border border-gray-700 text-white rounded-lg overflow-hidden shadow-md flex flex-col mx-6 sm:mx-4 md:mx-1">
@@ -64,4 +63,4 @@ export const CardWimages = ({ title, date, subtitle, link, description, imageUrl
             </div>
         </div>
     );
-}
+});

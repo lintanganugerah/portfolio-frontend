@@ -5,8 +5,9 @@ import { CertificateFeatures } from "../features/certif";
 import { ExperienceFeaturesJob, ExperienceFeaturesOrganization } from "../features/experience";
 import { ContactFeatures } from "../features/contact";
 import { ProjectFeatures } from "../features/project";
+import { memo } from "react";
 
-export const HomeRoute = () => {
+export const HomeRoute = memo(() => {
 	return (
 		<div className='w-full bg-black text-gray-200'>
 			<div className='absolute inset-0 z-0 w-full'>
@@ -51,4 +52,4 @@ export const HomeRoute = () => {
 			</div>
 		</div>
 	);
-};
+})

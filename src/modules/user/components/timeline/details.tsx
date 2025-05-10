@@ -19,7 +19,6 @@ export const TimelineCard: React.FC<TimelineCardProps> = ({
 	imageUrl,
 	link,
 }) => {
-	console.log(`TIMELINE DETAILS COMPONENT ${imageUrl}`)
 	return (
 		<div className='rounded-2xl overflow-hidden bg-gray-900 shadow-lg w-full max-w-md mx-auto'>
 			<div className='h-40 flex items-center justify-center'>
