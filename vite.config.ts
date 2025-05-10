@@ -6,7 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-	base: "/",
+	base: "./",
 	resolve: {
 		alias: {
 			Components: path.resolve(__dirname, "./src/components"),

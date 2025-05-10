@@ -6,7 +6,7 @@ export const fetchCertificates = createAsyncThunk(
 	async (_, { rejectWithValue }) => {
 		try {
 			const response = await axios.get(
-				"https://profilebe.ngeengz.eu/api/v1/certificate/all"
+				"https://porto.ngeengz.eu/api/v1/certificate/all"
 			);
 			if (response.status === 200) {
 				return response.data.data;

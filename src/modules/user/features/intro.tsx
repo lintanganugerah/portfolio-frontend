@@ -15,12 +15,12 @@ export const IntroFeatures = () => {
 	if (error) return <p>Error: {error}</p>;
 	if (!profile) return <p>No profile data available.</p>;
 
-
 	return (
 		<div>
 			<Intro
 				name={profile.name}
 				description={profile.bio}
+				imageUrl={profile.image}
 			/>
 		</div>
 	);

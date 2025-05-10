@@ -3,14 +3,12 @@ import { useDispatch, useSelector, TypedUseSelectorHook } from "react-redux";
 import { profileReducer } from "./slices/profileSlice";
 import { certificateReducer } from "./slices/certificateSlice";
 import { projectReducer } from "./slices/projectSlice";
-import { experienceReducer } from "./slices/experienceSlice";
 
 const store = configureStore({
 	reducer: {
 		user: profileReducer,
 		certificate: certificateReducer,
 		project: projectReducer,
-		experience: experienceReducer
 	},
 });
 

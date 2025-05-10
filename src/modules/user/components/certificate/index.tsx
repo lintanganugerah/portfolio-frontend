@@ -16,21 +16,22 @@ export const Certificate = ({
 	id,
 }: CertificateProps) => {
 	return (
-		<div className='border border-gray-900 hover:bg-white/10 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300 w-full h-full flex flex-col justify-between'>
-			<div className='space-y-2'>
-				<h2 className='text-xl font-bold text-white'>{title}</h2>
-				<p className='text-sm text-gray-400'>{description}</p>
-				<p className='text-xs text-gray-500'>Issued {year}</p>
-				<p className='text-xs text-gray-600'>ID: {id}</p>
+		<div className='flex flex-col space-y-1'>
+			<h2 className='text-xl font-bold'>{title}</h2>
+			<h3 className='text-gray-400'>{description}</h3>
+			<p className='text-gray-500'>Issued {year}</p>
+			<p className='text-gray-600'>ID: {id}</p>
+			<div className='border w-fit p-1 px-4 rounded-lg mt-2 hover:bg-white hover:text-black hover:font-bold transition-colors duration-300'>
+				<a
+					href={link}
+					target='_blank'
+					rel='noopener noreferrer'
+					className='flex flex-row items-center space-x-2'
+				>
+					<span>Show Credential</span>
+					<LuExternalLink />
+				</a>
 			</div>
-
-			<a href={link} target='_blank' rel='noopener noreferrer'
-				className='mt-4 inline-flex items-center px-4 py-2 border border-white rounded-xl text-white hover:bg-white hover:text-black font-medium transition-colors duration-300 w-fit'
-			>
-				<span>Show Credential</span>
-				<LuExternalLink className='ml-2' />
-			</a>
 		</div>
 	);
 };
-

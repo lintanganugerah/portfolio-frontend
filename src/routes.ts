@@ -3,7 +3,10 @@ import { createBrowserRouter } from "react-router-dom";
 export const createRouter = () =>
 	createBrowserRouter([
 		{
-			path: "/",
+			path: "",
+		},
+		{
+			path: "user",
 			lazy: async () => {
 				const { UserRoute } = await import("./modules/user");
 				return { Component: UserRoute };
@@ -44,12 +47,5 @@ export const createRouter = () =>
 					},
 				},
 			],
-		},
-		{
-			path: "*",
-			lazy: async () => {
-				const { NotFoundRoute } = await import("./modules/notfound");
-				return { Component: NotFoundRoute };
-			},
 		},
 	]);

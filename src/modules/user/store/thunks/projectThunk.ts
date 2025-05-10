@@ -6,7 +6,7 @@ export const fetchProjects = createAsyncThunk(
 	async (_, { rejectWithValue }) => {
 		try {
 			const response = await axios.get(
-				"https://profilebe.ngeengz.eu/api/v1/project/all"
+				"https://porto.ngeengz.eu/api/v1/project/all"
 			);
 			if (response.status === 200) {
 				return response.data.data;
@@ -28,7 +28,7 @@ export const fetchProjectById = createAsyncThunk(
 	async (id, { rejectWithValue }) => {
 		try {
 			const response = await axios.get(
-				`https://profilebe.ngeengz.eu/api/v1/project/${id}`
+				`https://porto.ngeengz.eu/api/v1/project/${id}`
 			);
 			if (response.status === 200) {
 				return response.data.data;
