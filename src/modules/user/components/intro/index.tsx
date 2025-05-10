@@ -1,26 +1,20 @@
 interface IntroProps {
 	name: string;
 	description: string;
-	imageUrl: string;
 }
 
-export const Intro = ({ name, description, imageUrl }: IntroProps) => {
+export const Intro = ({ name, description }: IntroProps) => {
 	return (
-		<div className='relative flex flex-row justify-around items-center'>
-			<div className='relative w-1/2 flex flex-col space-y-4 z-10'>
+		<div className='flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 px-6 lg:px-20 mt-20'>
+			{/* Intro Section */}
+			<div className='flex-1 flex flex-col justify-start items-center lg:items-start text-center lg:text-left space-y-4'>
 				<div className='flex flex-row items-center space-x-4'>
-					<div className='border-b w-8'></div>
-					<h4 className='text-xl'>Hello,</h4>
+				<div className='border-b w-8'></div>
+				<h4 className='text-xl'>Hello, I'm</h4>
+				<div className='border-b w-8'></div>
 				</div>
-				<h1 className='font-russo text-7xl'>{name}</h1>
-				<h3 className='text-xl line-clamp-3'>{description}</h3>
-			</div>
-			<div className='relative w-1/4 z-10'>
-				<img
-					src={imageUrl ? imageUrl : "/public/assets/placeholder.png"}
-					alt='photo'
-					className='rounded-4xl -rotate-6 hover:rotate-0 transition-transform duration-300'
-				/>
+				<h1 className='font-russo text-6xl lg:text-7xl'>{name}</h1>
+				<h3 className='text-xl'>{description}</h3>
 			</div>
 		</div>
 	);

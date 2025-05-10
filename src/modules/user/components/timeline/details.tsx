@@ -7,7 +7,8 @@ type TimelineCardProps = {
 	subtitle: string;
 	date: string;
 	description: EditorJsContent;
-	imageUrl: string;
+	imageUrl?: string;
+	link?: string;
 };
 
 export const TimelineCard: React.FC<TimelineCardProps> = ({
@@ -16,6 +17,7 @@ export const TimelineCard: React.FC<TimelineCardProps> = ({
 	date,
 	description,
 	imageUrl,
+	link,
 }) => {
 	return (
 		<div className='rounded-2xl overflow-hidden bg-gray-900 shadow-lg w-full max-w-md mx-auto'>
@@ -36,7 +38,16 @@ export const TimelineCard: React.FC<TimelineCardProps> = ({
 				<div className='text-gray-200 text-sm mb-4'>
 					<Output data={description} />
 				</div>
-				<button className='w-full'>View Project</button>
+				{ link ? 
+					(
+					<a href={link?? ''} target="_blank" className="block w-full border border-white-400 rounded-2xl mx-auto py-2 mt-2 text-center hover:bg-white hover:text-black transition duration-200">
+						View Project
+					</a>
+					) : (
+					<p className="mx-auto py-2 mt-2 text-center text-sm text-stone-500">
+						No Link Avaliable
+					</p>
+				)}
 			</div>
 		</div>
 	);

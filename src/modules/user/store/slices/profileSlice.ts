@@ -11,8 +11,9 @@ interface ProfileState {
 		bio: string;
 		image: string;
 		social: {
-			appname: string;
+			app_name: string;
 			link: string;
+			_id: string;
 		}[];
 	} | null;
 	loading: "idle" | "pending" | "succeeded" | "failed";
