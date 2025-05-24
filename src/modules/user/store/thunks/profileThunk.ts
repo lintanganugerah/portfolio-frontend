@@ -1,11 +1,11 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios, { AxiosError } from "axios";
-
+import BASE_URL from "../../const/url";
 export const fetchUser = createAsyncThunk(
 	"user/fetchUser",
 	async (_, { rejectWithValue }) => {
 		try {
-			const response = await axios.get("https://profilebe.ngeengz.eu/api/v1/user");
+			const response = await axios.get(`${BASE_URL}/user`);
 			if (response.status === 200) {
 				return response.data.data[0];
 			} else {

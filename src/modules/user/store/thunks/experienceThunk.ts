@@ -1,13 +1,15 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios, { AxiosError } from "axios";
+import BASE_URL from "modules/user/const/url";
 
 export const fetchExperiences = createAsyncThunk(
 	"project/fetchExperiences",
 	async (_, { rejectWithValue }) => {
 		try {
 			const response = await axios.get(
-				"https://profilebe.ngeengz.eu/api/v1/experience/all"
+				`${BASE_URL}/experience/all`
 			);
+			console.log(response);
 			if (response.status === 200) {
 				return response.data.data;
 			} else {

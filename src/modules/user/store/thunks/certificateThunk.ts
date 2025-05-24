@@ -1,12 +1,13 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios, { AxiosError } from "axios";
+import BASE_URL from "modules/user/const/url";
 
 export const fetchCertificates = createAsyncThunk(
 	"certificate/fetchCertificates",
 	async (_, { rejectWithValue }) => {
 		try {
 			const response = await axios.get(
-				"https://profilebe.ngeengz.eu/api/v1/certificate/all"
+				`${BASE_URL}/certificate/all`
 			);
 			if (response.status === 200) {
 				return response.data.data;

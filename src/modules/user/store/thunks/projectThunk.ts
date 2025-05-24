@@ -1,12 +1,13 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios, { AxiosError } from "axios";
+import BASE_URL from "modules/user/const/url";
 
 export const fetchProjects = createAsyncThunk(
 	"project/fetchProjects",
 	async (_, { rejectWithValue }) => {
 		try {
 			const response = await axios.get(
-				"https://profilebe.ngeengz.eu/api/v1/project/all"
+				`${BASE_URL}/project/all`
 			);
 			if (response.status === 200) {
 				return response.data.data;
@@ -28,7 +29,7 @@ export const fetchProjectById = createAsyncThunk(
 	async (id, { rejectWithValue }) => {
 		try {
 			const response = await axios.get(
-				`https://profilebe.ngeengz.eu/api/v1/project/${id}`
+				`${BASE_URL}/project/${id}`
 			);
 			if (response.status === 200) {
 				return response.data.data;
