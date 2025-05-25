@@ -1,5 +1,5 @@
 import { memo, useState } from "react";
-import { EditorJsContent } from "modules/user/types/editor";
+import { EditorJsContent } from "modules/profile/types/editor";
 import Output from "editorjs-react-renderer";
 
 interface CardProps {
@@ -16,10 +16,10 @@ export const CardWimages = memo(
     const [showMore, setShowMore] = useState(false);
     return (
       <div className="w-full">
-        <div className="bg-black border border-gray-700 text-white rounded-lg overflow-hidden shadow-md flex flex-col sm:flex-row">
+        <div className="bg-black border border-gray-700 text-white rounded-lg overflow-hidden shadow-md flex flex-col">
           {/* Image Container with 16:9 aspect ratio */}
           {imageUrl && (
-            <div className="w-full sm:w-1/2 relative">
+            <div className="w-full relative">
               <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
                 <img
                   src={imageUrl}
@@ -31,7 +31,7 @@ export const CardWimages = memo(
           )}
 
           {/* Content */}
-          <div className="flex flex-col justify-between flex-grow p-6 w-full sm:w-1/2">
+          <div className="flex flex-col justify-between flex-grow p-6">
             <div className="space-y-3">
               <h3
                 className={`text-2xl font-semibold ${
@@ -54,7 +54,7 @@ export const CardWimages = memo(
               {/* Description truncated */}
               <div
                 className={`text-gray-300 transition-all duration-300 ease-in-out ${
-                  showMore ? "" : "line-clamp-3"
+                  showMore ? "" : "line-clamp-1 xl:line-clamp-2"
                 }`}
               >
                 <Output data={description} />

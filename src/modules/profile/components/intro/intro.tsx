@@ -1,5 +1,5 @@
-import AnimatedContent from "modules/user/utils/animatedContent/animatedContent";
-import GradientText from "../../utils/gradientText/gradientText";
+import AnimatedContent from "modules/profile/components/Reactbits/animatedContent/animatedContent";
+import GradientText from "../Reactbits/gradientText/gradientText";
 
 interface IntroProps {
   name: string;
@@ -23,7 +23,7 @@ export const Intro = ({ name, description }: IntroProps) => {
           <h1 className="font-russo text-6xl lg:text-7xl">
             {/* <div className={nameStyle}>{name}</div> */}
             <GradientText
-              colors={["#0891B2", "#1E3A8A", "#0891B2"]}
+              colors={["#21BDD9", "#1d2ba3", "#21BDD9"]}
               animationSpeed={4}
             >
               {name}

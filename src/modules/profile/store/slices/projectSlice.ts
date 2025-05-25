@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchProjects } from "../thunks/projectThunk";
-import { EditorJsContent } from "modules/user/types/editor";
+import { EditorJsContent } from "modules/profile/types/editor";
 
 export interface Project {
 	_id: string;

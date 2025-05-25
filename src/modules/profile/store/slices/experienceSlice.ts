@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchExperiences } from "../thunks/experienceThunk";
-import { EditorJsContent } from "modules/user/types/editor";
+import { EditorJsContent } from "modules/profile/types/editor";
 
 interface Experience {
 	_id: string;

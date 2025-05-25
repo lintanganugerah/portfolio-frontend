@@ -1,5 +1,5 @@
 import Output from "editorjs-react-renderer";
-import { EditorJsContent } from "modules/user/types/editor";
+import { EditorJsContent } from "modules/profile/types/editor";
 import { useState } from "react";
 
 export default function Experience({

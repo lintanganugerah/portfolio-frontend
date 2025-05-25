@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { EditorJsContent } from "modules/user/types/editor";
+import { EditorJsContent } from "modules/profile/types/editor";
 import Output from "editorjs-react-renderer";
 
 type TimelineItemProps = {
